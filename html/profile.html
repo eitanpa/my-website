@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - הפרופיל שלי</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="apple-touch-icon" href="../asset/logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <script src="../js/loader.js"></script>
+
+    <nav id="main-nav"></nav>
+
+    <div class="container">
+      <div class="profile-card reveal">
+        <h2>הפרופיל שלי</h2>
+        <div class="profile-main-info">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            id="profile-page-avatar"
+            class="large-avatar"
+          />
+          <div class="user-details">
+            <p>
+              <strong>אימייל:</strong> <span id="profile-email">טוען...</span>
+            </p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="profile-settings">
+          <h3>עדכון פרטים</h3>
+
+          <div class="input-group">
+            <label>שם מלא:</label>
+            <input type="text" id="update-name" placeholder="הכנס שם חדש" />
+          </div>
+
+          <div class="input-group">
+            <label>קישור לתמונת פרופיל (URL):</label>
+            <input
+              type="text"
+              id="update-photo-url"
+              placeholder="הדבק כאן קישור לתמונה"
+            />
+          </div>
+
+          <!-- New Lecturer Fields (Visible to all for now, logic will handle saving) -->
+          <div class="input-group" id="lecturer-fields" style="display: none">
+            <label>תחום התמחות (למרצים):</label>
+            <select id="update-expertise">
+              <option value="">בחר תחום...</option>
+              <option value="programming">תכנות</option>
+              <option value="design">עיצוב</option>
+              <option value="marketing">שיווק</option>
+              <option value="business">עסקים</option>
+            </select>
+
+            <label style="margin-top: 10px">משפט על עצמי (Bio):</label>
+            <textarea
+              id="update-bio"
+              rows="2"
+              placeholder="משפט קצר שיופיע בכרטיס המרצה..."
+            ></textarea>
+          </div>
+
+          <div class="input-group">
+            <label>אבטחה:</label>
+            <button id="reset-password-btn" class="btn-secondary">
+              שלח אימייל לאיפוס סיסמה
+            </button>
+          </div>
+
+          <button id="save-profile-btn" class="btn-profile-save">
+            שמור שינויים
+          </button>
+          <p id="update-status" class="status-msg"></p>
+        </div>
+      </div>
+    </div>
+
+      <section class="profile-section reveal">
+        <div class="section-header">
+          <h3><i class="fas fa-play-circle"></i> הקורסים שלי</h3>
+          <p>קורסים שרכשת</p>
+        </div>
+        <div id="my-courses-grid" class="modern-grid"></div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <section class="profile-section reveal" id="wishlist-section">
+        <div class="section-header">
+          <h3><i class="fas fa-heart" style="color: #ef4444;"></i> מועדפים (Wishlist)</h3>
+          <p>קורסים ששמרת לרכישה או צפייה עתידית</p>
+        </div>
+        <div id="wishlist-courses-grid" class="modern-grid"></div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <section class="profile-section reveal">
+        <div class="section-header">
+          <h3><i class="fas fa-lightbulb"></i> במיוחד בשבילך</h3>
+          <p>קורסים חדשים שעשויים לעניין אותך</p>
+        </div>
+        <div id="recommended-courses-grid" class="modern-grid"></div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <section class="profile-section reveal">
+        <div class="section-header">
+          <h3><i class="fas fa-users"></i> מרצים שאני עוקב אחריהם</h3>
+          <p>התעדכן בתכנים החדשים של המנטורים שלך</p>
+        </div>
+        <div id="followed-authors-grid" class="modern-grid"></div>
+      </section>
+    </div>
+
+    <script type="module" src="../js/courses-data.js"></script>
+
+    <script src="../js/authors-data.js"></script>
+
+    <script src="../js/navbar.js"></script>
+
+    <script type="module" src="../js/auth.js"></script>
+
+    <script type="module" src="../js/profile-logic.js"></script>
+  </body>
+</html>

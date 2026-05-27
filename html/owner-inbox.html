@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - ניהול הודעות (Owner)</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <script src="../js/loader.js"></script>
+    <nav id="main-nav"></nav>
+
+    <div class="inbox-container reveal">
+      <div class="inbox-header">
+        <h1><i class="fas fa-inbox"></i> תיבת הודעות (Owner)</h1>
+        <div class="inbox-filters">
+          <button class="filter-btn active" onclick="filterMessages('all')">
+            הכל
+          </button>
+          <button class="filter-btn" onclick="filterMessages('new')">
+            חדש
+          </button>
+          <button class="filter-btn" onclick="filterMessages('general')">
+            כללי
+          </button>
+          <button class="filter-btn" onclick="filterMessages('bug')">
+            באגים
+          </button>
+          <button class="filter-btn" onclick="filterMessages('lecturer')">
+            מרצים
+          </button>
+        </div>
+      </div>
+
+      <div id="messages-container" class="messages-list">
+        <div class="loading-state">
+          <i class="fas fa-spinner fa-spin"></i> טוען הודעות...
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/owner-inbox-logic.js"></script>
+    <script type="module" src="../js/courses-data.js"></script>
+  </body>
+</html>

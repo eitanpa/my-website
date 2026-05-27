@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - כל הקורסים</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="apple-touch-icon" href="../asset/logo.png" />
+<link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <script src="../js/loader.js"></script>
+
+    <nav id="main-nav"></nav>
+
+    <header class="courses-page-header reveal">
+      <div class="container">
+        <h1>הקורסים המקצועיים של Educom</h1>
+        <p>תתחיל ללמוד היום את המיומנויות של המחר</p>
+
+        <div class="search-container">
+          <input
+            type="text"
+            id="courseSearch"
+            placeholder="חפש קורס (למשל: Python, UX...)"
+            onkeyup="filterCourses()"
+          />
+        </div>
+
+        <div class="category-chips" id="categoryChips">
+          <button
+            class="cat-chip active"
+            onclick="setCategoryFilter('all', this)"
+          >
+            <i class="fas fa-layer-group"></i> הכל
+          </button>
+          <button
+            class="cat-chip"
+            onclick="setCategoryFilter('programming', this)"
+          >
+            <i class="fas fa-code"></i> תכנות ופיתוח
+          </button>
+          <button class="cat-chip" onclick="setCategoryFilter('design', this)">
+            <i class="fas fa-paint-brush"></i> עיצוב גרפי
+          </button>
+          <button
+            class="cat-chip"
+            onclick="setCategoryFilter('marketing', this)"
+          >
+            <i class="fas fa-bullhorn"></i> שיווק דיגיטלי
+          </button>
+          <button
+            class="cat-chip"
+            onclick="setCategoryFilter('business', this)"
+          >
+            <i class="fas fa-briefcase"></i> עסקים וניהול
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="featured-courses reveal">
+      <div class="container">
+        <h2 id="courses-section-title">כל הקורסים שלנו</h2>
+        <div class="courses-grid" id="all-courses-grid"></div>
+      </div>
+    </section>
+
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/courses-data.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/course-search-history.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - המרצים שלנו</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="apple-touch-icon" href="../asset/logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <script src="../js/loader.js"></script>
+    <nav id="main-nav"></nav>
+
+    <div class="container" style="margin-top: 50px">
+      <div class="authors-header reveal">
+        <h1>המרצים המובילים</h1>
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="authorSearch"
+            placeholder="חפש לפי שם או תחום התמחות..."
+            onkeyup="filterAuthors()"
+          />
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
+
+      <div class="advanced-filters reveal">
+        <div class="chip-group" id="topicChips">
+          <button class="chip active" onclick="setTopic('all', this)">
+            <i class="fas fa-layer-group"></i> הכל
+          </button>
+          <button class="chip" onclick="setTopic('programming', this)">
+            <i class="fas fa-code"></i> תכנות
+          </button>
+          <button class="chip" onclick="setTopic('design', this)">
+            <i class="fas fa-paint-brush"></i> עיצוב
+          </button>
+          <button class="chip" onclick="setTopic('marketing', this)">
+            <i class="fas fa-bullhorn"></i> שיווק
+          </button>
+          <button class="chip" onclick="setTopic('business', this)">
+            <i class="fas fa-briefcase"></i> עסקים
+          </button>
+        </div>
+
+        <div class="sort-wrapper">
+          <label>מיין לפי:</label>
+          <select id="sortFilter" onchange="filterAuthors()">
+            <option value="default">בחירה</option>
+            <option value="popularity">דירוג גבוה</option>
+            <option value="courses">מספר קורסים</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="authors-grid" class="authors-grid reveal"></div>
+    </div>
+
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/courses-data.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script type="module" src="../js/authors-logic.js"></script>
+    <script src="../js/author-search-history.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - Site Updates</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="main-nav"></nav>
+
+    <div class="whats-new-container">
+      <div class="whats-new-header">
+        <h1>Site Updates</h1>
+        <p>
+          Stay up to date with the latest features, news, and announcements.
+        </p>
+      </div>
+
+      <div class="add-post-btn-container" id="add-post-container">
+        <button class="admin-update-btn" id="btn-open-modal">
+          <i class="fas fa-bullhorn"></i> Admin: Create Update
+        </button>
+      </div>
+
+      <div id="posts-grid">
+        <div style="text-align: center; padding: 40px; color: #888">
+          <i class="fas fa-spinner fa-spin fa-2x"></i>
+          <p style="margin-top: 15px">Loading updates...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Post Modal -->
+    <div class="modal-overlay" id="add-post-modal">
+      <div class="modal-content">
+        <h3>יצירת עדכון חדש</h3>
+        <input
+          type="text"
+          id="post-title"
+          placeholder="כותרת העדכון (לדוגמה: וידאו פלייר חדש!)"
+        />
+        <textarea
+          id="post-content"
+          rows="4"
+          placeholder="תוכן העדכון המלא..."
+        ></textarea>
+
+        <label
+          style="
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+            display: block;
+          "
+        >
+          טקסט שישלח בהתראה לכל המשתמשים (יוסף לתבנית: עדכון חדש לאתר! כותרת.
+          {הטקסט שלך}):
+        </label>
+        <textarea
+          id="post-notif-summary"
+          rows="2"
+          placeholder="תקציר להודעת הפוש (אופציונלי)"
+        ></textarea>
+
+        <div class="modal-actions">
+          <button class="btn-cancel" id="btn-close-modal">ביטול</button>
+          <button class="btn-save" id="btn-publish-post">
+            פרסם ושלח התראה
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/12.7.0/firebase-storage.js"
+    ></script>
+
+    <script src="../js/navbar.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/site-updates-logic.js"></script>
+        <script type="module" src="../js/courses-data.js"></script>
+  </body>
+</html>

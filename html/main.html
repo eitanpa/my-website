@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses Platform</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="apple-touch-icon" href="../asset/logo.png" />
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Google Fonts For Stitch Design -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS with disabled preflight to prevent breaking style.css -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        corePlugins: { preflight: false },
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "outline": "#737784",
+              "tertiary": "#473300",
+              "tertiary-container": "#634900",
+              "primary-container": "#0091FF",
+              "surface-container-low": "#f2f4f6",
+              "on-surface-variant": "#434653",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#5b4300",
+              "on-primary-fixed-variant": "#005bb5",
+              "tertiary-fixed": "#ffdf9e",
+              "primary-fixed-dim": "#b1e3ff",
+              "primary-fixed": "#daefff",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "inverse-surface": "#2d3133",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-container": "#eceef0",
+              "secondary": "#705d00",
+              "on-background": "#191c1e",
+              "outline-variant": "#c3c6d5",
+              "surface-tint": "#0091FF",
+              "secondary-fixed": "#ffe16d",
+              "surface": "#f7f9fb",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#b1e3ff",
+              "primary": "#007AFF",
+              "on-secondary-fixed-variant": "#544600",
+              "surface-container-high": "#e6e8ea",
+              "tertiary-fixed-dim": "#fabd00",
+              "on-tertiary-fixed": "#261a00",
+              "secondary-fixed-dim": "#e9c400",
+              "surface-variant": "#e0e3e5",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#221b00",
+              "surface-dim": "#d8dadc",
+              "on-secondary-container": "#6e5c00",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#eff1f3",
+              "on-tertiary-container": "#f0b500",
+              "secondary-container": "#fcd400",
+              "on-surface": "#191c1e",
+              "background": "#f7f9fb",
+              "on-primary-container": "#bde0ff",
+              "on-primary-fixed": "#001d3d"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.125rem",
+              "lg": "0.25rem",
+              "xl": "0.5rem",
+              "full": "0.75rem"
+            },
+            "fontFamily": {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+    <script src="../js/loader.js"></script>
+
+    <nav id="main-nav"></nav>
+
+    <!-- Scroll Down Arrow -->
+    <div class="scroll-down-container">
+      <div class="scroll-arrow"></div>
+    </div>
+
+    <!-- Hero Section (Stitch Style) -->
+    <section class="hero pt-48 pb-32 px-8 overflow-hidden relative" style="background-image: linear-gradient(rgba(247, 249, 251, 0.8), rgba(247, 249, 251, 0.95)), url('../asset/students-modern-devices-studying-online-260nw-2261575087.webp'); background-size: cover; background-position: center; background-attachment: fixed;">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+        <div class="md:col-span-7 z-10 text-right">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs border border-secondary-container font-bold tracking-widest uppercase mb-8">
+            קורסים אונליין
+          </span>
+          <h1 id="welcome-msg" class="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8 text-editorial-balance">
+            פלטפורמת למידה מקוונת
+          </h1>
+          <p class="text-xl text-on-surface-variant leading-relaxed mb-12 max-w-xl">
+             הצטרפו לאלפי סטודנטים שכבר לומדים את מקצועות העתיד עם המרצים הטובים ביותר.
+          </p>
+          <div class="hero-btns flex flex-wrap gap-6">
+            <a href="auth.html?mode=signup" id="heroLinkTag" class="no-underline">
+              <button class="cursor-pointer bg-secondary-container flex justify-center items-center text-on-secondary-container px-10 py-5 rounded-xl font-headline font-extrabold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1" id="heroActionButton">
+                הצטרף בחינם
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-5 relative hidden md:block">
+          <div class="absolute -top-12 rtl:right-auto rtl:-left-12 -right-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+          <div class="relative bg-surface-container-lowest p-6 rounded-[2.5rem] shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-700">
+            <img alt="Office" class="rounded-[1.5rem] w-full h-[500px] object-cover" 
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnxuMA-u8ZWOQey7aW4cccf1xgDLLpos39QJI4EYff7Fr62t_NY5ishFqladUu7wsrvTSFnEUM3WGZazxouQyDUucjavIkgSXBqpFTwbiV9oI5jboch8YzmdQANGl6B0Pi4bulU5600uQ0cS5AYhW4LNfGwOhWXhdAcrBf58nXGFLjCvrOl7UOKRVHg_VoNMu2E9N4R5jp6CsWFhvAawfnCgEj_uI1Yqpj9I3yLgQTusv1X4WxIWleGkCjfIJbjjvvB2uGWaaBKGI"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-bar bg-surface-container-low py-12 border-y border-surface-dim">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-center text-primary">
+          <div class="stat-item">
+            <div class="stat-icon text-4xl mb-3 text-primary"><i class="fas fa-users"></i></div>
+            <div class="stat-number font-headline font-extrabold text-4xl mb-1 text-primary">500+</div>
+            <div class="stat-label text-on-surface-variant font-medium">תלמידים פעילים</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon text-4xl mb-3 text-primary"><i class="fas fa-book-open"></i></div>
+            <div class="stat-number font-headline font-extrabold text-4xl mb-1 text-primary">100+</div>
+            <div class="stat-label text-on-surface-variant font-medium">קורסים מקצועיים</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon text-4xl mb-3 text-primary"><i class="fas fa-star"></i></div>
+            <div class="stat-number font-headline font-extrabold text-4xl mb-1 text-primary">4.8</div>
+            <div class="stat-label text-on-surface-variant font-medium">דירוג ממוצע</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon text-4xl mb-3 text-primary"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="stat-number font-headline font-extrabold text-4xl mb-1 text-primary">50+</div>
+            <div class="stat-label text-on-surface-variant font-medium">מרצים מומחים</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section (Asymmetric Bento style from Stitch) -->
+    <section class="categories-section bg-surface-container-low py-32 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col sm:flex-row justify-between items-end mb-20 gap-6">
+            <div>
+              <h2 class="font-headline text-4xl font-extrabold text-primary mb-4">קטגוריות לימוד</h2>
+              <p class="text-lg text-on-surface-variant max-w-2xl">מצאו את הקטגוריה שמתאימה לכם, ולמדו ממיטב המרצים בתחום תוך התנסות פרקטית.</p>
+            </div>
+            <a class="text-on-surface font-bold border-b-2 border-secondary pb-1 hover:text-primary transition-colors whitespace-nowrap no-underline" href="all-courses.html">לכל הקורסים</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Main Category Feature -->
+          <a href="all-courses.html?category=programming" class="group bg-primary p-10 rounded-3xl shadow-xl flex flex-col justify-between min-h-[400px] text-on-primary md:row-span-2 relative overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-1 no-underline">
+            <div class="relative z-10 block">
+              <span class="text-secondary-container font-extrabold uppercase tracking-widest text-xs block mb-8">הקטגוריה המובילה</span>
+              <h3 class="font-headline text-4xl font-bold mb-6 text-white">תכנות ופיתוח</h3>
+              <p class="text-white text-lg leading-relaxed opacity-90 mb-8 max-w-[90%]">
+                Python, JavaScript, Fullstack... למדו מטובי המרצים בתחום והתחילו את הקריירה שלכם כמהנדסי תוכנה.
+              </p>
+              <ul class="space-y-4 text-white">
+                <li class="flex items-center gap-3" style="color: white !important;"><span class="material-symbols-outlined text-secondary-container">check_circle</span> פיתוח Web מתקדם</li>
+                <li class="flex items-center gap-3" style="color: white !important;"><span class="material-symbols-outlined text-secondary-container">check_circle</span> בניית רשת משתמשים</li>
+                <li class="flex items-center gap-3" style="color: white !important;"><span class="material-symbols-outlined text-secondary-container">check_circle</span> אלקטרוניקה ולוגיקה</li>
+              </ul>
+            </div>
+          </a>
+
+          <!-- Category Design -->
+          <a href="all-courses.html?category=design" class="group bg-surface-container-lowest p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between min-h-[250px] no-underline">
+             <div>
+                <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary-container transition-colors duration-500">
+                   <i class="fas fa-paint-brush text-primary group-hover:text-on-secondary-container text-xl"></i>
+                </div>
+                <h3 class="font-headline text-2xl font-bold text-primary mb-3">עיצוב גרפי</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">UI/UX, Photoshop, Figma</p>
+             </div>
+             <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors rtl-flip block mt-6">arrow_forward</span>
+          </a>
+
+          <!-- Category Marketing (Yellow Version) -->
+          <a href="all-courses.html?category=marketing" class="group bg-[#facc15] hover:bg-[#fde047] p-10 rounded-3xl shadow-sm hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 flex flex-col justify-between min-h-[250px] no-underline">
+             <div>
+                <div class="w-14 h-14 bg-white/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/40 transition-colors duration-500">
+                   <i class="fas fa-bullhorn text-slate-900 group-hover:text-black text-xl"></i>
+                </div>
+                <h3 class="font-headline text-2xl font-bold text-slate-900 mb-3" style="color: #111827 !important;">שיווק דיגיטלי</h3>
+                <p class="text-slate-800 font-medium leading-relaxed text-sm">PPC, SEO, Social Media</p>
+             </div>
+             <span class="material-symbols-outlined text-slate-800 group-hover:text-slate-900 transition-colors rtl-flip block mt-6">arrow_forward</span>
+          </a>
+
+          <!-- Category Business (Span 2) -->
+          <a href="all-courses.html?category=business" class="group bg-surface-container-lowest p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between min-h-[250px] md:col-span-2 no-underline">
+             <div class="flex items-center justify-between">
+               <div>
+                  <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-500">
+                     <i class="fas fa-briefcase text-primary group-hover:text-on-secondary-container text-xl"></i>
+                  </div>
+                  <h3 class="font-headline text-2xl font-bold text-primary mb-3">עסקים וניהול</h3>
+                  <p class="text-on-surface-variant leading-relaxed max-w-sm">Product, Management, Finance</p>
+               </div>
+               <span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors rtl-flip">arrow_forward</span>
+             </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us (Editorial Content Design from Stitch) -->
+    <section class="why-us-section py-32 px-8 bg-surface">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-24 items-start">
+        <div class="md:w-1/2 sticky top-32">
+          <h2 class="font-headline text-5xl font-extrabold text-primary mb-10 leading-tight">
+            למה <span class="underline decoration-[#facc15] decoration-4 underline-offset-8">אצלנו?</span>
+          </h2>
+          <div class="space-y-12">
+            <div class="flex gap-6">
+               <span class="font-headline text-3xl font-bold text-[#eab308]">01.</span>
+               <div>
+                 <h4 class="font-headline text-xl font-bold text-primary mb-2">מרצים מהשורה הראשונה</h4>
+                 <p class="text-on-surface-variant">למדו ישירות ממומחים שחיים את התעשייה ומביאים ניסיון פרקטי מהשטח.</p>
+               </div>
+            </div>
+            <div class="flex gap-6">
+               <span class="font-headline text-3xl font-bold text-[#eab308]">02.</span>
+               <div>
+                 <h4 class="font-headline text-xl font-bold text-primary mb-2">למידה מעשית</h4>
+                 <p class="text-on-surface-variant">דגש על פרויקטים אמיתיים ובניית תיק עבודות שיכין אתכם לשוק העבודה.</p>
+               </div>
+            </div>
+            <div class="flex gap-6">
+               <span class="font-headline text-3xl font-bold text-[#eab308]">03.</span>
+               <div>
+                 <h4 class="font-headline text-xl font-bold text-primary mb-2">קריירה בצמיחה</h4>
+                 <p class="text-on-surface-variant">כלים, הכוונה ונטוורקי שיעזרו לכם להגיע לתפקיד הבא שלכם.</p>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 space-y-16">
+           <div class="rounded-3xl overflow-hidden shadow-2xl">
+              <img alt="Curriculum Development" class="w-full h-[600px] object-cover" 
+                   src="../asset/why-us.jpg"/>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="featured-courses py-24 px-8 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="font-headline text-4xl font-extrabold text-primary mb-12 text-center">הקורסים המבוקשים ביותר</h2>
+        <!-- The JS dynamically adds courses here -->
+        <div class="courses-grid gap-8" id="main-courses-grid">
+           <!-- Loaded from courses-data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Instructors Section -->
+    <section class="top-instructors-section py-24 px-8 bg-surface">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="font-headline text-4xl font-extrabold text-primary mb-12 text-center">המרצים המובילים שלנו</h2>
+        <!-- Container for instructors -->
+        <div class="instructors-strip gap-8 justify-center" id="top-instructors-strip">
+          <p class="text-center w-full text-on-surface-variant">טוען מרצים...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-24 px-8 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="font-headline text-4xl font-extrabold text-primary mb-12 text-center">מה התלמידים אומרים</h2>
+        <div class="testimonials-carousel" id="testimonials-carousel">
+          <p class="text-center w-full text-on-surface-variant">טוען המלצות...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner (From Stitch) -->
+    <section class="cta-banner py-24 px-8 bg-surface">
+      <div class="max-w-5xl mx-auto bg-primary rounded-[3rem] p-16 text-center relative overflow-hidden">
+        <!-- Background decorative element -->
+        <div class="absolute -bottom-24 rtl:-right-24 rtl:left-auto -left-24 w-96 h-96 bg-secondary/20 rounded-full blur-[100px]"></div>
+        <h2 class="relative z-10 font-headline text-4xl md:text-5xl font-extrabold text-white mb-6">מוכנים להתחיל <br/><span class="text-secondary">ללמוד ולהתקדם?</span></h2>
+        <p class="relative z-10 text-on-primary-container text-xl font-medium max-w-xl mx-auto mb-10">הצטרפו לקהילת הלומדים שלנו והתחילו את המסע המקצועי שלכם היום.</p>
+        <div class="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="auth.html?mode=signup" class="bg-secondary-container text-on-secondary-container px-12 py-5 rounded-2xl font-headline font-extrabold text-xl hover:scale-105 transition-transform duration-300 shadow-xl inline-block w-full sm:w-auto no-underline">הרשמה בחינם &larr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-8 border-t bg-surface-container-highest border-outline-variant/30">
+      <div class="container mx-auto px-8 max-w-7xl text-center">
+        <p class="text-on-surface-variant text-sm font-medium">© כל הזכויות שמורות | האתר נוצר כחלק מתרגיל.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/courses-data.js"></script>
+    <script type="module" src="../js/main-page-extras.js"></script>
+    <script src="../js/navbar.js"></script>
+    <!-- DEBUG SCRIPT: Remove after fixing -->
+    <script type="module" src="../js/debug-guest.js"></script>
+
+    <!-- Scroll Arrow Behavior -->
+    <script>
+      (function () {
+        const arrow = document.querySelector(".scroll-down-container");
+        if (!arrow) return;
+
+        let scrollTimer = null;
+        let maxScrollY = 0;
+        let permanentlyHidden = false;
+
+        arrow.addEventListener("click", function () {
+          const sections = document.querySelectorAll("section, footer");
+          let target = null;
+          for (const sec of sections) {
+            const rect = sec.getBoundingClientRect();
+            if (rect.top > 10) {
+              target = sec;
+              break;
+            }
+          }
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+            arrow.classList.add("hidden");
+          }
+        });
+
+
+        window.addEventListener("scroll", function () {
+          if (permanentlyHidden) return;
+          const currentY = window.scrollY;
+          if (currentY > maxScrollY) maxScrollY = currentY;
+          if (currentY < 100 && maxScrollY > 300) {
+            arrow.classList.add("hidden");
+            permanentlyHidden = true;
+            return;
+          }
+          arrow.classList.add("hidden");
+          if (scrollTimer) clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(function () {
+            if (permanentlyHidden) return;
+            const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+            if (!isAtBottom) {
+              arrow.classList.remove("hidden");
+            }
+          }, 1500);
+        });
+
+        setTimeout(function () {
+          const currentY = window.scrollY;
+          const isAtBottom = window.innerHeight + currentY >= document.body.offsetHeight - 100;
+          if (currentY > 100 || isAtBottom) {
+            arrow.classList.add("hidden");
+          }
+        }, 100);
+      })();
+    </script>
+  </body>
+</html>

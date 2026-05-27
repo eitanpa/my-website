@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - פרופיל מרצה</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="apple-touch-icon" href="../asset/logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <script src="../js/loader.js"></script>
+
+    <nav id="main-nav"></nav>
+
+    <div class="container" style="margin-top: 50px">
+      <!-- Profile card + Stats side by side -->
+      <div class="author-profile-row">
+        <div class="profile-card reveal" id="author-profile-header"></div>
+        <div
+          class="author-teaching-stats reveal"
+          id="author-teaching-stats"
+        ></div>
+      </div>
+
+      <h2 style="margin-top: 40px; margin-bottom: 20px">קורסים של המרצה</h2>
+      <div id="author-courses-grid" class="courses-grid reveal"></div>
+
+      <h2 style="margin-top: 50px; margin-bottom: 20px">ביקורות תלמידים</h2>
+      <div id="author-reviews-list" class="reviews-list reveal">
+        <p>טוען ביקורות...</p>
+      </div>
+
+      <!-- Similar Instructors -->
+      <h2 style="margin-top: 50px; margin-bottom: 20px">
+        מרצים שעשויים לעניין אותך
+      </h2>
+      <div class="similar-instructors reveal" id="similar-instructors"></div>
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/courses-data.js"></script>
+    <script type="module" src="../js/author-profile-logic.js"></script>
+  </body>
+</html>

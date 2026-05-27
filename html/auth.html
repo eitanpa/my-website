@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - כניסה והרשמה</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="apple-touch-icon" href="../asset/logo.png" />
+<link rel="stylesheet" href="../css/style.css" />
+    <style>
+      .auth-container {
+        max-width: 400px;
+        margin: 60px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .auth-logo {
+        font-size: 32px;
+        font-weight: bold;
+        color: #ebab0c;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .auth-logo span {
+        color: #1691fd;
+      }
+
+      .auth-form input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-family: inherit;
+      }
+      .btn-auth {
+        width: 100%;
+        background-color: #1691fd;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      .google-btn {
+        width: 100%;
+        background-color: white;
+        color: #333;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 25px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+      }
+      .google-btn img {
+        width: 20px;
+      }
+      .switch-auth {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+      .switch-auth span {
+        color: #1691fd;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="../js/loader.js"></script>
+
+    <div class="auth-container reveal">
+      <div class="auth-logo"><span>Edu</span>com</div>
+
+      <h2 id="auth-title">התחברות</h2>
+
+      <div class="auth-form">
+        <input
+          type="text"
+          id="displayName"
+          class="hidden"
+          placeholder="שם מלא"
+        />
+        <input type="email" id="email" placeholder="אימייל" />
+        <input type="password" id="password" placeholder="סיסמה" />
+        <button class="btn-auth" id="mainAuthBtn">התחבר</button>
+      </div>
+
+      <div id="google-section">
+        <div style="margin: 20px 0; color: #888">או</div>
+        <button class="google-btn" id="googleLoginBtn">
+          <img
+            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            alt="google"
+          />
+          המשך עם Google
+        </button>
+      </div>
+
+      <div class="switch-auth" id="switch-msg">
+        עוד לא רשום? <span id="toggleAuth">צור חשבון חדש</span>
+      </div>
+    </div>
+
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/courses-data.js"></script>
+  </body>
+</html>

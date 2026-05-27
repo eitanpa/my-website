@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educom - צור קשר</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png?v=1" />
+    <link rel="apple-touch-icon" href="../asset/logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <script src="../js/loader.js"></script>
+
+    <nav id="main-nav"></nav>
+
+    <div class="contact-page-container container reveal">
+      <div class="contact-header">
+        <h1>נשמח לשמוע ממך</h1>
+        <p>יש לך שאלה? הצעה? או שסתם בא לך להגיד שלום? אנחנו כאן.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-form-card">
+          <!-- Form Type Tabs -->
+          <div class="form-type-tabs" id="form-type-tabs"></div>
+
+          <form id="contactForm">
+            <div id="contact-form-body">
+              <!-- Dynamic fields rendered by JS -->
+            </div>
+            <button type="submit" class="btn-contact-send">
+              <span>שלח הודעה</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <div id="form-status"></div>
+        </div>
+
+        <div class="contact-info-column">
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-text">
+              <h4>המרכז שלנו</h4>
+              <p>לונדון, קיריבאטי</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-text">
+              <h4>טלפון</h4>
+              <p>ייתווסף בהמשך</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-headset"></i></div>
+            <div class="info-text">
+              <h4>תמיכה טכנית</h4>
+              <p>ייתווסף בהמשך</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-map reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31899.04918733806!2d-157.48170190000002!3d2.0027478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a02a1f8e57335df%3A0xf83fe4478d8e013d!2zTG9uZG9uLCDXp9eZ16jXmdeR15DXmNeZ!5e0!3m2!1siw!2sil!4v1770231553221!5m2!1siw!2sil"
+        width="1600"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+
+    <script src="../js/navbar.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/courses-data.js"></script>
+    <script type="module" src="../js/contact-logic.js"></script>
+  </body>
+</html>
