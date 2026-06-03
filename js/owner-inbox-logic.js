@@ -177,7 +177,7 @@ function renderMessages(messages) {
         </div>
 
         <div class="msg-actions">
-          ${!isResolved ? `<button class="action-btn btn-resolve" onclick="markResolved('${msg.id}')"><i class="fas fa-check"></i> סמן טופל</button>` : '<span style="color:green; padding:5px"><i class="fas fa-check-circle"></i> טופל</span>'}
+          ${!isResolved ? `<button class="action-btn btn-resolve" onclick="markResolved('${msg.id}')"><i class="fas fa-check"></i> סמן כטופל</button>` : '<span style="color:green; padding:5px"><i class="fas fa-check-circle"></i> טופל</span>'}
           <button class="action-btn btn-delete" onclick="deleteMessage('${msg.id}')"><i class="fas fa-trash"></i> מחק</button>
         </div>
       </div>
